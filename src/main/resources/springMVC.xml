@@ -17,7 +17,7 @@
     <!--设置默认静态资源放行-->
     <mvc:default-servlet-handler/>
     <!--使用注解-->
-    <context:component-scan base-package="orz.mmp.appproject"/>
+    <context:component-scan base-package="orz.mmp.app"/>
     <!--设置上传文件-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <!--<property name="maxUploadSize" value="104857600" />-->
