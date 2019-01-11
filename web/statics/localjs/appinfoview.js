@@ -1,5 +1,5 @@
 $("#back").on("click",function(){
-	window.location.href = "appController/getAppList";
+	window.location.href = "../list";
 });
 	
 	
