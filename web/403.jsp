@@ -11,14 +11,14 @@
     <title>403</title>
 
     <!-- Bootstrap -->
-    <link href="${pageContext.request.contextPath }/statics/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/myProjectAssets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="${pageContext.request.contextPath }/statics/css/font-awesome.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/myProjectAssets/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="${pageContext.request.contextPath }/statics/css/nprogress.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/myProjectAssets/css/nprogress.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="${pageContext.request.contextPath }/statics/css/custom.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/myProjectAssets/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -40,16 +40,16 @@
     </div>
 
     <!-- jQuery -->
-    <script src="${pageContext.request.contextPath }/statics/js/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath }/myProjectAssets/js/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="${pageContext.request.contextPath }/statics/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath }/myProjectAssets/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="${pageContext.request.contextPath }/statics/js/fastclick.js"></script>
+    <script src="${pageContext.request.contextPath }/myProjectAssets/js/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="${pageContext.request.contextPath }/statics/js/nprogress.js"></script>
+    <script src="${pageContext.request.contextPath }/myProjectAssets/js/nprogress.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="${pageContext.request.contextPath }/statics/js/custom.min.js"></script>
+    <script src="${pageContext.request.contextPath }/myProjectAssets/js/custom.min.js"></script>
   </body>
 </html>				
 			

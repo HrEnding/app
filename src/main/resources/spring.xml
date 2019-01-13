@@ -36,7 +36,7 @@
 
     <!--配置mapper文件，自动扫描操作（有Spring来管理MyBatis中的Mapper文件）-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="orz.mmp.appproject.dao"/>
+        <property name="basePackage" value="orz.mmp.app.dao"/>
     </bean>
 
     <!--由Spring来管理MyBatis-->

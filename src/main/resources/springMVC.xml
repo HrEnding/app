@@ -27,7 +27,7 @@
     <!--视图解析器（自动补全跳转页面资源的前缀和后缀）-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!--设置前缀补全的资源-->
-        <property name="prefix" value="/WEB-INF/page/"/>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
         <!--设置后缀补全的资源-->
         <property name="suffix" value=".jsp"/>
     </bean>

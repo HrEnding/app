@@ -14,21 +14,21 @@
     <title>APP后台管理系统</title>
 
     <!-- Bootstrap -->
-    <link href="${pageContext.request.contextPath }/statics/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/myProjectAssets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="${pageContext.request.contextPath }/statics/css/font-awesome.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/myProjectAssets/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="${pageContext.request.contextPath }/statics/css/nprogress.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/myProjectAssets/css/nprogress.css" rel="stylesheet">
   	<!-- iCheck -->
-    <link href="${pageContext.request.contextPath }/statics/css/green.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/myProjectAssets/css/green.css" rel="stylesheet">
     <!-- bootstrap-progressbar -->
-    <link href="${pageContext.request.contextPath }/statics/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/myProjectAssets/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
-    <link href="${pageContext.request.contextPath }/statics/css/jqvmap.min.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath }/myProjectAssets/css/jqvmap.min.css" rel="stylesheet"/>
     <!-- Custom Theme Style -->
-    <link href="${pageContext.request.contextPath }/statics/css/custom.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/myProjectAssets/css/custom.min.css" rel="stylesheet">
     <!-- add localcss 2016-8-21 -->
-    <link href='${pageContext.request.contextPath }/statics/localcss/applist.css' rel='stylesheet'>
+    <link href='${pageContext.request.contextPath }/myProjectAssets/localcss/applist.css' rel='stylesheet'>
   </head>
   <body class="nav-md footer_fixed">
     <div class="container body">
@@ -36,7 +36,7 @@
         <div class="col-md-3 left_col menu_fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="${pageContext.request.contextPath }/manager/backend/main" class="site_title"><i class="fa fa-paw"></i> <span>APP BMS</span></a>
+              <a href="${pageContext.request.contextPath }/userLoginController/backend/main" class="site_title"><i class="fa fa-paw"></i> <span>APP BMS</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -44,7 +44,7 @@
             <!-- menu profile quick info -->
             <div class="profile">
               <div class="profile_pic">
-                <img src="${pageContext.request.contextPath }/statics/images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="${pageContext.request.contextPath }/myProjectAssets/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -62,7 +62,7 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> APP管理 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="${pageContext.request.contextPath }/manager/backend/app/list">APP审核</a></li>
+                      <li><a href="${pageContext.request.contextPath}/appCheckController/applist">APP审核</a></li>
                       <li><a href="javascript:;">广告推广</a></li>
                     </ul>
                   </li>
@@ -96,7 +96,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="${pageContext.request.contextPath }/manager/logout">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="${pageContext.request.contextPath }/userLoginController/logout">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -115,11 +115,11 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="${pageContext.request.contextPath }/statics/images/img.jpg" alt="">${userSession.userCode }
+                    <img src="${pageContext.request.contextPath }/myProjectAssets/images/img.jpg" alt="">${userSession.userCode }
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="${pageContext.request.contextPath }/manager/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="${pageContext.request.contextPath }/userLoginController/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
 
@@ -128,7 +128,7 @@
                   <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                     <li>
                       <a>
-                        <span class="image"><img src="${pageContext.request.contextPath }/statics/images/img.jpg" alt="Profile Image" /></span>
+                        <span class="image"><img src="${pageContext.request.contextPath }/myProjectAssets/images/img.jpg" alt="Profile Image" /></span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -140,7 +140,7 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><img src="${pageContext.request.contextPath }/statics/images/img.jpg" alt="Profile Image" /></span>
+                        <span class="image"><img src="${pageContext.request.contextPath }/myProjectAssets/images/img.jpg" alt="Profile Image" /></span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -152,7 +152,7 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><img src="${pageContext.request.contextPath }/statics/images/img.jpg" alt="Profile Image" /></span>
+                        <span class="image"><img src="${pageContext.request.contextPath }/myProjectAssets/images/img.jpg" alt="Profile Image" /></span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -164,7 +164,7 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><img src="${pageContext.request.contextPath }/statics/images/img.jpg" alt="Profile Image" /></span>
+                        <span class="image"><img src="${pageContext.request.contextPath }/myProjectAssets/images/img.jpg" alt="Profile Image" /></span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="orz.mmp.app.dao.AppInfoMapper">
+    <resultMap id="appInfo" type="orz.mmp.app.pojo.AppInfo">
+        <id column="id" property="id"/>
+        <result column="softwareName" property="softwareName"/>
+        <result column="APKName" property="apkName"/>
+        <result column="supportROM" property="supportROM"/>
+        <result column="interfaceLanguage" property="interfaceLanguage"/>
+        <result column="softwareSize" property="softwareSize"/>
+        <result column="updateDate" property="updateDate"/>
+        <result column="devId" property="devId"/>
+        <result column="appInfo" property="appInfo"/>
+        <result column="status" property="status"/>
+        <result column="onSaleDate" property="onSaleDate"/>
+        <result column="offSaleDate" property="offSaleDate"/>
+        <result column="flatformId" property="flatformId"/>
+        <result column="categoryLevel3" property="categoryLevel3"/>
+        <result column="downloads" property="downloads"/>
+        <result column="createdBy" property="createdBy"/>
+        <result column="creationDate" property="creationDate"/>
+        <result column="modifyBy" property="modifyBy"/>
+        <result column="modifyDate" property="modifyDate"/>
+        <result column="categoryLevel1" property="categoryLevel1"/>
+        <result column="categoryLevel2" property="categoryLevel2"/>
+        <result column="logoPicPath" property="logoPicPath"/>
+        <result column="logoLocPath" property="logoLocPath"/>
+        <result column="versionId" property="versionId"/>
+    </resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="orz.mmp.app.dao.AppVersionMapper">
+    <resultMap id="appVersion" type="orz.mmp.app.pojo.AppVersion">
+        <id column="id" property="id"/>
+        <result column="appId" property="appId"/>
+        <result column="versionNo" property="versionNo"/>
+        <result column="versionInfo" property="versionInfo"/>
+        <result column="publishStatus" property="publishStatus"/>
+        <result column="downloadLink" property="downloadLink"/>
+        <result column="versionSize" property="versionSize"/>
+        <result column="createdBy" property="createdBy"/>
+        <result column="creationDate" property="creationDate"/>
+        <result column="modifyBy" property="modifyBy"/>
+        <result column="modifyDate" property="modifyDate"/>
+        <result column="apkLocPath" property="apkLocPath"/>
+        <result column="apkFileName" property="apkFileName"/>
+    </resultMap>
+</mapper>

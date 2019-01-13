@@ -181,7 +181,7 @@
 	var deviceIsWindowsPhone = navigator.userAgent.indexOf("Windows Phone") >= 0;
 
 	/**
-	 * Android requires exceptions.
+	 * Android requires s.
 	 *
 	 * @type boolean
 	 */
