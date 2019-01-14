@@ -3,14 +3,29 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="orz.mmp.app.dao.AppCategoryMapper">
-    <resultMap id="appCategory" type="orz.mmp.app.pojo.AppCategory">
-        <id column="id" property="id"/>
-        <result column="categoryCode" property="categoryCode"/>
-        <result column="categoryName" property="categoryName"/>
-        <result column="parentId" property="parentId"/>
-        <result column="createdBy" property="createdBy"/>
-        <result column="creationTime" property="creationTime"/>
-        <result column="modifyBy" property="modifyBy"/>
-        <result column="modifyDate" property="modifyDate"/>
-    </resultMap>
+    <select id="getAppCategoryListByParentId" resultType="orz.mmp.app.pojo.AppCategory">
+        select id,categoryCode,categoryName from app_category
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="parentId != null">
+                and parentId = #{parentId}
+            </if>
+            <if test="parentId == null">
+                and parentId is null
+            </if>
+        </trim>
+    </select>
+    <select id="getAppCategoryAllByParentId" resultType="orz.mmp.app.pojo.AppCategory">
+        select id,categoryCode,categoryName from app_category
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="integer != null and integer=='true'">
+                and parentId in ('1','2')
+            </if>
+            <if test="integer != null and integer=='false'">
+                and parentId not in ('1','2')
+            </if>
+            <if test="integer == null">
+                and parentId is null
+            </if>
+        </trim>
+    </select>
 </mapper>

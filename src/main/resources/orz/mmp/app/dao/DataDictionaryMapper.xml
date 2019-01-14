@@ -3,15 +3,12 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="orz.mmp.app.dao.DataDictionaryMapper">
-    <resultMap id="dataDictionary" type="orz.mmp.app.pojo.DataDictionary">
-        <id column="id" property="id"/>
-        <result column="typeCode" property="typeCode"/>
-        <result column="typeName" property="typeName"/>
-        <result column="valueId" property="valueId"/>
-        <result column="valueName" property="valueName"/>
-        <result column="createdBy" property="createdBy"/>
-        <result column="creationDate" property="creationDate"/>
-        <result column="modifyBy" property="modifyBy"/>
-        <result column="modifyDate" property="modifyDate"/>
-    </resultMap>
+    <select id="getDataDictionaryList" resultType="orz.mmp.app.pojo.DataDictionary">
+        select * from  data_dictionary
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="typeCode != null">
+                and typeCode = #{typeCode}
+            </if>
+        </trim>
+    </select>
 </mapper>

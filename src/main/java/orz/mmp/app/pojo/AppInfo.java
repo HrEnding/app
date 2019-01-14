@@ -10,24 +10,35 @@ public class AppInfo {
   private String interfaceLanguage;//界面语言
   private Date updateDate;//更新日期
   private Double softwareSize;//软件大小（单位：M）
-  private String apkName;//APK名称
+  private String APKName;//APK名称
   private String supportRom;//支持ROM
+
   private Long devId;//开发者id
+
   private String appInfo;//应用简介
+
   private Long status;//app状态id
+
   private Date onSaleDate;//上架时间
   private Date offSaleDate;//下架时间
+
   private Long categoryLevel3;//所属三级分类id
+
   private Long downloads;//下载量（单位：次）
+
   private Long flatformId;//app所属平台id
+
   private Long createdBy;//创建者
   private Date creationDate;//创建时间
   private Long modifyBy;//更新者
   private Date modifyDate;//更新时间
+
   private Long categoryLevel1;//所属一级分类id
   private Long categoryLevel2;//所属二级分类id
+
   private String logoPicPath;//LOGO图片URL路径
   private String logoLocPath;//LOGO图片的服务器存储路径
+
   private Long versionId;//最新的版本id
 
   public Long getId() {
@@ -46,12 +57,12 @@ public class AppInfo {
     this.softwareName = softwareName;
   }
 
-  public String getApkName() {
-    return apkName;
+  public String getAPKName() {
+    return APKName;
   }
 
-  public void setApkName(String apkName) {
-    this.apkName = apkName;
+  public void setAPKName(String APKName) {
+    this.APKName = APKName;
   }
 
   public String getSupportRom() {
@@ -221,4 +232,6 @@ public class AppInfo {
   public void setVersionId(Long versionId) {
     this.versionId = versionId;
   }
+
+
 }
