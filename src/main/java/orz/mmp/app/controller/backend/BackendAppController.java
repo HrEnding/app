@@ -6,12 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import orz.mmp.app.pojo.AppCategory;
-import orz.mmp.app.pojo.AppInfo;
-import orz.mmp.app.pojo.DataDictionary;
+import orz.mmp.app.pojo.*;
 import orz.mmp.app.service.backend.AppCategoryService;
+import orz.mmp.app.service.backend.AppInfoService;
+import orz.mmp.app.service.backend.AppVersionService;
 import orz.mmp.app.service.backend.DataDictionaryService;
-import orz.mmp.app.service.backend.impl.AppInfoServiceImpl;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -22,14 +21,16 @@ import java.util.Map;
 @RequestMapping(value = "/appCheckController")
 public class BackendAppController {
     @Resource
-    private AppInfoServiceImpl appInfoServiceImpl;
+    private AppInfoService appInfoService;
     @Resource
     private AppCategoryService appCategoryService;
     @Resource
     private DataDictionaryService dataDictionaryService;
+    @Resource
+    private AppVersionService appVersionService;
     @RequestMapping(value = "/applist")
     public String applist(AppInfo appInfo, String pageIndex, HttpServletRequest request){
-        Map<String,Object> map  = appInfoServiceImpl.showAppInfo(pageIndex, appInfo);
+        Map<String,Object> map  = appInfoService.showAppInfo(pageIndex, appInfo);
         List<AppCategory>categoryLevel1List = getCategoryList(null);
         request.setAttribute("categoryLevel1List",categoryLevel1List);
         List<AppCategory>categoryLevel2List = getCategoryList(appInfo.getCategoryLevel1()!=null?appInfo.getCategoryLevel1().toString():"true");
@@ -68,7 +69,21 @@ public class BackendAppController {
         return JSONArray.toJSONString(getCategoryList(integer));
     }
     @RequestMapping(value = "/appcheck")
-    public String checkApp(){
-        return "";
+    public String checkApp(@RequestParam(value="aid") String appId,
+                           @RequestParam(value="vid") String versionId,
+                           HttpServletRequest request){
+        AppInfoExt appInfoExt = appInfoService.getAppInfo(appId!=null && appId!=""?Integer.parseInt(appId):null);
+        AppVersion appVersion = appVersionService.getAppVersionById(versionId!=null && versionId!=""?Integer.parseInt(versionId):null);
+        request.setAttribute("ExtAppVersion",appVersion);
+        request.setAttribute("ExtAppInfo",appInfoExt);
+        return "/backend/appcheck";
+    }
+    @RequestMapping(value = "/checksave")
+    public String checksave(AppInfo appInfo){
+        if (appInfoService.updateStatus(Integer.valueOf(appInfo.getStatus().toString()),
+                Integer.valueOf(appInfo.getId().toString()))){
+            return "redirect:/appCheckController/applist";
+        }
+        return "redirect:/appCheckController/checksave";
     }
 }

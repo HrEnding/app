@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static orz.mmp.app.tools.Constants.PAGE_SIZE;
+
 @Service
 public class AppInfoServiceImpl implements AppInfoService {
     @Resource
@@ -18,7 +20,7 @@ public class AppInfoServiceImpl implements AppInfoService {
 
     public Map<String,Object>showAppInfo(String num, AppInfo appInfo){
         Map<String,Object> map = new HashMap<String, Object>();
-        int pageSize = 3;
+        int pageSize = PAGE_SIZE;
         //默认首次访问首页
         int pageNumber = 1;
         if(num!=null && num.length()>0){
@@ -40,5 +42,17 @@ public class AppInfoServiceImpl implements AppInfoService {
         map.put("totalPage",totalPage);
         map.put("appInfoList",appInfoExtList);
         return map;
+    }
+
+    public AppInfoExt getAppInfo(Integer id) {
+        return appInfoMapper.getAppInfo(id,null);
+    }
+
+    public boolean updateStatus(Integer status, Integer id) {
+        boolean flag = false;
+        if (appInfoMapper.updateStatus(status,id)>0){
+            flag = true;
+        }
+        return flag;
     }
 }

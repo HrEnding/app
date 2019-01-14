@@ -11,7 +11,7 @@ public class AppInfo {
   private Date updateDate;//更新日期
   private Double softwareSize;//软件大小（单位：M）
   private String APKName;//APK名称
-  private String supportRom;//支持ROM
+  private String supportROM;//支持ROM
 
   private Long devId;//开发者id
 
@@ -65,12 +65,12 @@ public class AppInfo {
     this.APKName = APKName;
   }
 
-  public String getSupportRom() {
-    return supportRom;
+  public String getSupportROM() {
+    return supportROM;
   }
 
-  public void setSupportRom(String supportRom) {
-    this.supportRom = supportRom;
+  public void setSupportROM(String supportROM) {
+    this.supportROM = supportROM;
   }
 
   public String getInterfaceLanguage() {

@@ -29,4 +29,12 @@ public interface AppInfoMapper {
      * @return
      */
     AppInfoExt getAppInfo(@Param("id") Integer id ,@Param("APKName") String APKName);
+
+    /**
+     * 根据Id改变app审核转态
+     * @param status
+     * @param id
+     * @return
+     */
+    int updateStatus(@Param("status")Integer status,@Param("id")Integer id);
 }
